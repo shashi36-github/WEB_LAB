@@ -1,0 +1,75 @@
+NAME:SUDANA SHASHI KIRAN 
+REDG NUMBER : 21BCE8644
+
+Code:
+/*
+      * Purpose: Coding Practice
+      * Date: 13-06-2023
+      * Program : Pattren
+      * Reg No:21BCE8644
+      */
+public class PatternPrinting {
+    public static void main(String[] args) {
+        int rows = 5;
+
+        System.out.println("Pattern using for loop:");
+        printPatternWithForLoop(rows);
+
+        System.out.println("\nPattern using while loop:");
+        printPatternWithWhileLoop(rows);
+
+        System.out.println("\nPattern using do-while loop:");
+        printPatternWithDoWhileLoop(rows);
+    }
+
+    public static void printPatternWithForLoop(int rows) {
+        for (int i = 0; i < rows; i++) {
+            for (int j = rows - i; j > 1; j--) {
+                System.out.print(" ");
+            }
+            for (int j = 0; j <= i; j++) {
+                System.out.print("* ");
+            }
+            System.out.println();
+        }
+    }
+
+    public static void printPatternWithWhileLoop(int rows) {
+        int i = 0;
+        while (i < rows) {
+            int j = rows - i;
+            while (j > 1) {
+                System.out.print(" ");
+                j--;
+            }
+            int k = 0;
+            while (k <= i) {
+                System.out.print("* ");
+                k++;
+            }
+            System.out.println();
+            i++;
+        }
+    }
+
+    public static void printPatternWithDoWhileLoop(int rows) {
+        int i = 0;
+        do {
+            int j = rows - i;
+            do {
+                System.out.print(" ");
+                j--;
+            } while (j > 1);
+
+            int k = 0;
+            do {
+                System.out.print("* ");
+                k++;
+            } while (k <= i);
+
+            System.out.println();
+            i++;
+        } while (i < rows);
+    }
+}
+Output:
